@@ -17,62 +17,62 @@ public class OperationServiceImplUnitTest {
     // ADDITION UNIT TESTS
     @Test
     public void additionWithCorrectResultTest() {
-        final Integer result = this.operationService.addition(5, 5);
+        final Long result = this.operationService.addition(5L, 5L);
 
         assertNotNull(result);
-        assertEquals(10, result);
+        assertEquals(10L, result);
     }
 
     @Test
     public void additionWithCorrectResult2Test() {
-        final Integer result = this.operationService.addition(50, 23);
+        final Long result = this.operationService.addition(50L, 23L);
 
         assertNotNull(result);
-        assertEquals(73, result);
+        assertEquals(73L, result);
     }
 
     @Test
     public void additionWithCorrectNegativeResultTest() {
-        final Integer result = this.operationService.addition(5, -10);
+        final Long result = this.operationService.addition(5L, -10L);
 
         assertNotNull(result);
-        assertEquals(-5, result);
+        assertEquals(-5L, result);
     }
 
     @Test
     public void additionWithNullNumberATest() {
         assertThrows(NullPointerException.class, () -> {
-            this.operationService.addition(null, 10);
+            this.operationService.addition(null, 10L);
         });
     }
 
     @Test
     public void additionWithNullNumberBTest() {
         assertThrows(NullPointerException.class, () -> {
-            this.operationService.addition(10, null);
+            this.operationService.addition(10L, null);
         });
     }
 
     // SUBTRACTION UNIT TESTS
     @Test
     public void subtractionWithCorrectResultTest() {
-        final Integer result = this.operationService.subtraction(5, 5);
+        final Long result = this.operationService.subtraction(5L, 5L);
 
         assertNotNull(result);
-        assertEquals(0, result);
+        assertEquals(0L, result);
     }
 
     @Test
     public void subtractionWithCorrectResult2Test() {
-        final Integer result = this.operationService.subtraction(50, 23);
+        final Long result = this.operationService.subtraction(50L, 23L);
 
         assertNotNull(result);
-        assertEquals(27, result);
+        assertEquals(27L, result);
     }
 
     @Test
     public void subtractionWithCorrectNegativeResultTest() {
-        final Integer result = this.operationService.subtraction(5, 10);
+        final Long result = this.operationService.subtraction(5L, 10L);
 
         assertNotNull(result);
         assertEquals(-5, result);
@@ -81,14 +81,14 @@ public class OperationServiceImplUnitTest {
     @Test
     public void subtractionWithNullNumberATest() {
         assertThrows(NullPointerException.class, () -> {
-            this.operationService.subtraction(null, 10);
+            this.operationService.subtraction(null, 10L);
         });
     }
 
     @Test
     public void subtractionWithNullNumberBTest() {
         assertThrows(NullPointerException.class, () -> {
-            this.operationService.subtraction(10, null);
+            this.operationService.subtraction(10L, null);
         });
     }
 

@@ -21,8 +21,8 @@ public class SubtractionController {
     }
 
     @GetMapping("/subtraction")
-    public ResponseEntity<Integer> getSubtractionResult(@RequestParam Integer numberA, @RequestParam Integer numberB) {
-        final Integer result = this.operationService.subtraction(numberA, numberB);
+    public ResponseEntity<Long> getSubtractionResult(@RequestParam Long numberA, @RequestParam Long numberB) {
+        final Long result = this.operationService.subtraction(numberA, numberB);
 
         return ResponseEntity.ok(result);
     }
